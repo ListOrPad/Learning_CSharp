@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MbvFDBCNq6zYwH5MrxE+2g0fnYFRqO2LdETSHLR9F+JgT6C4U+iOzQVX1rvU9s6vSxbrEp58k6wGkd1LICyi2Q==",
+  "success": true,
+  "projectFilePath": "J:\\Мой диск\\Game Design\\C# learn\\VSThemeProject1\\VSThemeProject1\\VSThemeProject1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ListO\\.nuget\\packages\\microsoft.visualstudio.vsixcolorcompiler\\17.0.31709.430\\microsoft.visualstudio.vsixcolorcompiler.17.0.31709.430.nupkg.sha512"
+  ],
+  "logs": []
+}

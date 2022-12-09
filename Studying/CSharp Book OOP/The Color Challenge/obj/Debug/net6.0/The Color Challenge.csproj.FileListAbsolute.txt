@@ -1,0 +1,15 @@
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\bin\Debug\net6.0\The Color Challenge.exe
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\bin\Debug\net6.0\The Color Challenge.deps.json
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\bin\Debug\net6.0\The Color Challenge.runtimeconfig.json
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\bin\Debug\net6.0\The Color Challenge.dll
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\bin\Debug\net6.0\The Color Challenge.pdb
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\The Color Challenge.csproj.AssemblyReference.cache
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\The Color Challenge.GeneratedMSBuildEditorConfig.editorconfig
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\The Color Challenge.AssemblyInfoInputs.cache
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\The Color Challenge.AssemblyInfo.cs
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\The Color Challenge.csproj.CoreCompileInputs.cache
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\The Color Challenge.dll
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\refint\The Color Challenge.dll
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\The Color Challenge.pdb
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\The Color Challenge.genruntimeconfig.cache
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The color challenge\The Color Challenge\obj\Debug\net6.0\ref\The Color Challenge.dll

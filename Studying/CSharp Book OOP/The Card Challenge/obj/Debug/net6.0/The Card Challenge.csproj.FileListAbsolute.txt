@@ -1,0 +1,15 @@
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\bin\Debug\net6.0\The Card Challenge.exe
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\bin\Debug\net6.0\The Card Challenge.deps.json
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\bin\Debug\net6.0\The Card Challenge.runtimeconfig.json
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\bin\Debug\net6.0\The Card Challenge.dll
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\bin\Debug\net6.0\The Card Challenge.pdb
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\The Card Challenge.csproj.AssemblyReference.cache
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\The Card Challenge.GeneratedMSBuildEditorConfig.editorconfig
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\The Card Challenge.AssemblyInfoInputs.cache
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\The Card Challenge.AssemblyInfo.cs
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\The Card Challenge.csproj.CoreCompileInputs.cache
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\The Card Challenge.dll
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\refint\The Card Challenge.dll
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\The Card Challenge.pdb
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\The Card Challenge.genruntimeconfig.cache
+H:\Мой диск\Game Design\Learning_CSharp\Studying\CSharp Book OOP\The Card Challenge\The Card Challenge\obj\Debug\net6.0\ref\The Card Challenge.dll

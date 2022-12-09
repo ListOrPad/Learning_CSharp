@@ -1,0 +1,15 @@
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\СSharp Player's Guide Book.csproj.AssemblyReference.cache
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\СSharp Player's Guide Book.GeneratedMSBuildEditorConfig.editorconfig
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\СSharp Player's Guide Book.AssemblyInfoInputs.cache
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\СSharp Player's Guide Book.AssemblyInfo.cs
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\СSharp Player's Guide Book.csproj.CoreCompileInputs.cache
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\bin\Debug\net6.0\СSharp Player's Guide Book.exe
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\bin\Debug\net6.0\СSharp Player's Guide Book.deps.json
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\bin\Debug\net6.0\СSharp Player's Guide Book.runtimeconfig.json
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\bin\Debug\net6.0\СSharp Player's Guide Book.dll
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\bin\Debug\net6.0\СSharp Player's Guide Book.pdb
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\СSharp Player's Guide Book.dll
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\refint\СSharp Player's Guide Book.dll
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\СSharp Player's Guide Book.pdb
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\СSharp Player's Guide Book.genruntimeconfig.cache
+H:\Мой диск\Game Design\C# learn\СSharp Player's Guide Book\СSharp Player's Guide Book\obj\Debug\net6.0\ref\СSharp Player's Guide Book.dll

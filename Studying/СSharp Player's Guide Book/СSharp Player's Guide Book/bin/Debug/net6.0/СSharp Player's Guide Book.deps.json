@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "СSharp Player's Guide Book/1.0.0": {
+        "runtime": {
+          "СSharp Player's Guide Book.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "СSharp Player's Guide Book/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
