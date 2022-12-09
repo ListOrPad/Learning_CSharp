@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The point challenge\\The Point Challenge\\The Point Challenge.csproj": {}
+    "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Point Challenge\\The Point Challenge.csproj": {}
   },
   "projects": {
-    "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The point challenge\\The Point Challenge\\The Point Challenge.csproj": {
+    "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Point Challenge\\The Point Challenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The point challenge\\The Point Challenge\\The Point Challenge.csproj",
+        "projectUniqueName": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Point Challenge\\The Point Challenge.csproj",
         "projectName": "The Point Challenge",
-        "projectPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The point challenge\\The Point Challenge\\The Point Challenge.csproj",
+        "projectPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Point Challenge\\The Point Challenge.csproj",
         "packagesPath": "C:\\Users\\bitsw\\.nuget\\packages\\",
-        "outputPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The point challenge\\The Point Challenge\\obj\\",
+        "outputPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Point Challenge\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bitsw\\AppData\\Roaming\\NuGet\\NuGet.Config",

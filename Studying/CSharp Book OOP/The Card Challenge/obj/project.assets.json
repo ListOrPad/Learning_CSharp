@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Card Challenge\\The Card Challenge\\The Card Challenge.csproj",
+      "projectUniqueName": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Card Challenge\\The Card Challenge.csproj",
       "projectName": "The Card Challenge",
-      "projectPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Card Challenge\\The Card Challenge\\The Card Challenge.csproj",
+      "projectPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Card Challenge\\The Card Challenge.csproj",
       "packagesPath": "C:\\Users\\bitsw\\.nuget\\packages\\",
-      "outputPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Card Challenge\\The Card Challenge\\obj\\",
+      "outputPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\The Card Challenge\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bitsw\\AppData\\Roaming\\NuGet\\NuGet.Config",

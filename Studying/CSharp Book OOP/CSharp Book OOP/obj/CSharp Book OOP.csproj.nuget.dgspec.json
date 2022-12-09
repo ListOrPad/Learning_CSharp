@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Мой диск\\Game Design\\C# learn\\Studying\\CSharp Book OOP\\CSharp Book OOP\\CSharp Book OOP.csproj": {}
+    "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\CSharp Book OOP\\CSharp Book OOP.csproj": {}
   },
   "projects": {
-    "H:\\Мой диск\\Game Design\\C# learn\\Studying\\CSharp Book OOP\\CSharp Book OOP\\CSharp Book OOP.csproj": {
+    "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\CSharp Book OOP\\CSharp Book OOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Мой диск\\Game Design\\C# learn\\Studying\\CSharp Book OOP\\CSharp Book OOP\\CSharp Book OOP.csproj",
+        "projectUniqueName": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\CSharp Book OOP\\CSharp Book OOP.csproj",
         "projectName": "CSharp Book OOP",
-        "projectPath": "H:\\Мой диск\\Game Design\\C# learn\\Studying\\CSharp Book OOP\\CSharp Book OOP\\CSharp Book OOP.csproj",
+        "projectPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\CSharp Book OOP\\CSharp Book OOP.csproj",
         "packagesPath": "C:\\Users\\bitsw\\.nuget\\packages\\",
-        "outputPath": "H:\\Мой диск\\Game Design\\C# learn\\Studying\\CSharp Book OOP\\CSharp Book OOP\\obj\\",
+        "outputPath": "H:\\Мой диск\\Game Design\\Learning_CSharp\\Studying\\CSharp Book OOP\\CSharp Book OOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bitsw\\AppData\\Roaming\\NuGet\\NuGet.Config",
