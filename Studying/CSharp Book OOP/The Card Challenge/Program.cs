@@ -10,22 +10,24 @@ namespace The_Card_Challenge
         }
         static void Main(string[] args)
         {
-            Card[] cards = new Card[52];      // Do I need this line?
             Card card = new Card();
 
-            int x = 0;
+            int enumCountRank = Enum.GetNames(typeof(CardRank)).Length;
+            int enumCountColor = Enum.GetNames(typeof(CardColor)).Length;
 
-            for (int i = 0; i < cards.Length; i++)  
+            for (int i = 0; i < enumCountRank; i++)  
             {
+                for (int k = 0; k < enumCountColor; k++)
+                {
 
+                    card.Rank = (CardRank)i;
+                    card.Color = (CardColor)k; //how to reset counter to 0 after i = 3
+                    Console.WriteLine($"The {card.Color} {card.Rank}");
 
-
-                card.Rank = (CardRank)x;    
-                card.Color = (CardColor)i; //how to reset counter to 0 after i = 3
-                Console.WriteLine($"The {card.Color} {card.Rank}");
+                }
             }
 
-            (CardColor, CardRank) cardTuple = (card.Color, card.Rank);
+            //(CardColor, CardRank) cardTuple = (card.Color, card.Rank);
 
             //CardColor[] color = new CardColor[4];
             //CardRank[] rank = new CardRank[14];
