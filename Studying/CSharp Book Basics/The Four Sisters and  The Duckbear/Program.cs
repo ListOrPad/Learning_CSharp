@@ -10,8 +10,9 @@
         }
         static void Main(string[] args)
         {
-            string x = Input("how old are you?");
-            Console.WriteLine($"{x} and you?");
+            int eggCount = Convert.ToInt32(Input("How many choco eggs were gathered today?"));
+            int bearGets = eggCount % 4;
+            Console.WriteLine($"The bear gets {bearGets} eggs today");
         }
     }
 }
