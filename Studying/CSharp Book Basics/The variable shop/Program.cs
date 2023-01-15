@@ -26,7 +26,7 @@
             bool isBigger = true;
 
             Console.WriteLine($"Interegs: \n{int1}; {int2}; {int3}; {int4}; {int5}; {int6}; {int7}; {int8}");
-            Console.WriteLine($"Real Numbers: \n{double0}; {doubleF}; {doubleM}; (all of those float numbers" +
+            Console.WriteLine($"Real Numbers: \n{double0}; {doubleF}; {doubleM}; (all of those are float numbers" +
                                                                               $" are different types, check code)");
             Console.WriteLine($"Text: \n{text}; {literal}");
             Console.WriteLine($"Conditional: \n{isBigger}");
