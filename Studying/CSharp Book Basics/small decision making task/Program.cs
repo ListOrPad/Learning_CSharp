@@ -7,9 +7,13 @@
             Console.WriteLine("what is your number? ");
             int ticking = Convert.ToInt32(Console.ReadLine());
             if (ticking % 2 == 0)
-                Console.WriteLine("tick");
+            {
+                Console.WriteLine("tick"); 
+            }
             else
-                Console.WriteLine("tock");
+            {
+                Console.WriteLine("tock"); 
+            }
         }
     }
 }
