@@ -1,4 +1,6 @@
-﻿namespace Switches_book_task
+﻿using System.Diagnostics;
+
+namespace Switches_book_task
 {
     internal class Program
     {
@@ -34,7 +36,13 @@
             };
 
 
-            Console.WriteLine($"{item} cost {price} gold");
+            Console.WriteLine("What is you name btw?");
+            string name = Console.ReadLine();
+
+            if (name == "ListOrPad")
+                Console.WriteLine($"For you, my friend, the {item} price is twice cheaper! it's {price / 2} gold.");
+            else
+                Console.WriteLine($"{item} cost {price} gold");
         }
         static void Main(string[] args)
         {
@@ -46,7 +54,7 @@
                 "5 - Machete\n" +
                 "6 - Canoe\n" +
                 "7 - Food supplies");
-            int choice = Convert.ToInt32(InputNoLine("What item do you want to see the price of?"));
+            int choice = Convert.ToInt32(InputNoLine("What item do you want to see the price of? "));
             ShowItemPrice(choice);
 
         }
