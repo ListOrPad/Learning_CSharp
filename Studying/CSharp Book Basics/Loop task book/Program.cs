@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            // user 1 move
+
+
+                                                        // user 1 move
+
+
             int chosenNumber;
 
             do
@@ -16,7 +20,12 @@
 
                 Console.Clear();
 
-            // user 2 move
+
+
+
+                                                        // user 2 move
+
+
             Console.Write("User 2, guess the number. ");
             int guessedNumber;
 
