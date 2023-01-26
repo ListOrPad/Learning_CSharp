@@ -2,6 +2,19 @@
 {
     internal class Program
     {
+        static string CheckWait(int index)
+        {
+            if ( index % 2 == 0)
+            {
+                string isWaiting = "is waiting for you";
+                return isWaiting; 
+            }
+            else
+            {
+                string notWaiting = "Isn't waiting";
+                return notWaiting; 
+            }
+        }
         static void Main(string[] args)
         {
             //loop 1. Calculating the minimum value in the array
@@ -40,29 +53,18 @@
             float average = (float)total / array2.Length;
             Console.WriteLine(average);
 
-            //my custom task with foreach loop
-            // if clientNumber % 2 => client is waiting
-            int[] indexList = new int[5] { 1,2,3,4,5 };
-            string[] names = new string[5] { "Dima", "Max", "Vlad", "Vova", "Ilya" };
+            Console.WriteLine("Step to personal task, push any key");
+            Console.ReadKey(true);
+            Console.Clear();
+            //my custom task here
+            // if clientNumber % 2 => {clientName} is waiting
+            int[] indexList = new int[] { 1,2,3,4,5 };
+            string[] names = new string[] { "Dima", "Max", "Vlad", "Lew", "Ilya" };
             for (int i = 0; i < indexList.Length; i++)
             {
+                Console.WriteLine($"{names[i]} {CheckWait(indexList[i])}");
+            } 
 
-                foreach (int clientIndex in indexList)
-                {
-                    if (clientIndex % 2 == 0)
-                    {
-                        Console.WriteLine(clientIndex + "person is waiting");
-                    }
-                    else if (clientIndex % 2 != 0)
-                    {
-                        Console.WriteLine(clientIndex + "Isn't waiting");
-                    }
-
-                }
-                } 
-
-
-            //if clientNumber % 2 => bool = true , awaits
         }
     }
 }
