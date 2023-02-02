@@ -71,7 +71,8 @@
 
                 else if (cityHP <= 0)
                 {
-                    Console.WriteLine("You've lost! Try again.");
+                    Console.WriteLine("You've lost! Push any key, then try again.");
+                    Console.ReadKey(true);
                     break;
                 }
                 else
