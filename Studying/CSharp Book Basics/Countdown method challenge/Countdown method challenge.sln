@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countdown method challenge", "Countdown method challenge.csproj", "{B0F3982D-F092-406A-A358-B6899664D551}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0F3982D-F092-406A-A358-B6899664D551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F3982D-F092-406A-A358-B6899664D551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F3982D-F092-406A-A358-B6899664D551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F3982D-F092-406A-A358-B6899664D551}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {722CB7B6-7CE6-41A5-A37E-B0A3E5F33D53}
+	EndGlobalSection
+EndGlobal

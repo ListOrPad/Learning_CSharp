@@ -6,13 +6,11 @@
         {
             if ( index % 2 == 0)
             {
-                string isWaiting = "is waiting for you";
-                return isWaiting; 
+                return "is waiting for you";
             }
             else
             {
-                string notWaiting = "Isn't waiting";
-                return notWaiting; 
+                return "Isn't waiting";
             }
         }
         static void Main(string[] args)
@@ -53,10 +51,13 @@
             float average = (float)total / array2.Length;
             Console.WriteLine(average);
 
-            Console.WriteLine("Step to personal task, push any key");
+
+            //my custom task here
+            Console.WriteLine("Step to personal task\n" +
+                "push any key");
             Console.ReadKey(true);
             Console.Clear();
-            //my custom task here
+
             // if clientNumber % 2 => {clientName} is waiting
             int[] indexList = new int[] { 1,2,3,4,5 };
             string[] names = new string[] { "Dima", "Max", "Vlad", "Lew", "Ilya" };
