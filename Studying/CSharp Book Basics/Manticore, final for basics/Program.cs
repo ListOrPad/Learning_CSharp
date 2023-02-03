@@ -29,6 +29,7 @@
 
             while (true)
             {
+                //Move to the next round
                 round++;
 
                 //Calculating canonDamage
@@ -46,7 +47,7 @@
                     canonDamage = 10;
                 }
 
-                //Info
+                //Display Info
                 Console.WriteLine($"STATUS: Round: {round} City: {cityHP}/15 Manticore: {bossHP}/10\n" +
                     $"The Canon is expected to deal {canonDamage} damage this round");
                 //opening the fire
@@ -66,9 +67,9 @@
                 if (bossHP <= 0)
                 {
                     Console.WriteLine("The Manticore was destroyed! The city of Consolas has been saved!");
+                    Console.ReadKey(true);
                     break;
                 }
-
                 else if (cityHP <= 0)
                 {
                     Console.WriteLine("You've lost! Push any key, then try again.");
