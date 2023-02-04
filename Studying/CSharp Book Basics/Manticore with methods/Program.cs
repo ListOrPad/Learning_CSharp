@@ -1,8 +1,8 @@
 ﻿using System.Text;
 
 namespace Manticore_with_methods
-    {
-        internal class Program
+{
+    internal class Program
     {
         static string Input(string text)
         {
@@ -27,30 +27,40 @@ namespace Manticore_with_methods
             }
             else return 1; //normal attack
         }
-        static void DisplayInfo(int round, int cityHP, int bossHP, int canonDamage)
+        static void DisplayInfo(int _round, int _cityHP, int _bossHP, int _canonDamage)
         {
-            Console.WriteLine($"STATUS: Round: {round} City: {cityHP}/15 Manticore: {bossHP}/10\n" +
-                    $"The Canon is expected to deal {canonDamage} damage this round");
+            Console.WriteLine($"STATUS: Round: {_round} City: {_cityHP}/15 Manticore: {_bossHP}/10\n" +
+                    $"The Canon is expected to deal {_canonDamage} damage this round");
         }
 
-        static void OpenFire(int manticoreDistance, int bossHP, int canonDamage)
+        static int OpenFire(int _manticoreDistance, int _bossHP, int _canonDamage)
         {
 
             Console.Write("Enter the desired Canon range ( 0 to 100 ): ");
             int canonTarget = Convert.ToInt32(Console.ReadLine());
-            if (canonTarget > manticoreDistance)
-                Console.WriteLine("That round OVERSHOT the target");
-            if (canonTarget < manticoreDistance)
-                Console.WriteLine("That round FELL SHORT of the target");
-            if (canonTarget == manticoreDistance)
+            if (canonTarget > _manticoreDistance)
             {
-                bossHP -= canonDamage;
+                Console.WriteLine("That round OVERSHOT the target");
+                return _bossHP;
+            }
+            else if (canonTarget < _manticoreDistance)
+            {
+                Console.WriteLine("That round FELL SHORT of the target");
+                return _bossHP;
+            }
+            else
+            {
+                return _bossHP -= _canonDamage;
                 Console.WriteLine("This round was a direct HIT");
             }
         }
+        static void ShowResult()
+        {
+
+        }
         static void Main(string[] args)
         {
-            //ALRT
+            //ALERT
             Console.WriteLine("the guardsman: OH NO! THE MANTICORE IS APPROACHING! TAKE COVER!");
             Console.ReadKey(true);
             Console.Clear();
@@ -65,6 +75,7 @@ namespace Manticore_with_methods
                 );
             Console.Clear();
 
+
             //player 2 turn
             Console.WriteLine("Player 2, it's your turn");
 
@@ -73,30 +84,33 @@ namespace Manticore_with_methods
                 //Move to the next round
                 round++;
 
-                //Calculating canonDamage
+                //Calculating canonDamage this round
                 int canonDamage = CalcCanonDmg(round);
 
-                //Display Info, Status
+                //Display Info, Status this round
                 DisplayInfo(round, cityHP, bossHP, canonDamage);
 
-                //opening the fire
-                OpenFire(manticoreDistance, bossHP, canonDamage);
+                //(opening the fire) giving feedback on an attack, updating bossHP if needed
+                bossHP = OpenFire(manticoreDistance, bossHP, canonDamage);
 
-                // Conclusions in the end of the turn:
+                //Updating cityHP in the end of the round
+                cityHP--;
+
+                // Show Results:
                 if (bossHP <= 0)
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("The Manticore was destroyed! The city of Consolas has been saved!");
                     Console.ReadKey(true);
                     break;
                 }
                 else if (cityHP <= 0)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("You've lost! Push any key, then try again.");
                     Console.ReadKey(true);
                     break;
                 }
-                else
-                    cityHP--;
             }
         }
     }
