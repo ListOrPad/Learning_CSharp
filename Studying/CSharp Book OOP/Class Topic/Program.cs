@@ -1,13 +1,85 @@
 ﻿namespace Class_Topic
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public string Input(string text)
         {
-            //create class
+            //It writes text then you make an input
+            Console.WriteLine(text);
+            string input = Console.ReadLine();
+            return input;
+        }
+        public Arrowhead GetArrowhead()
+        {
 
-            //create new instance of an Arrow class
-            Arrow arrow = new Arrow();
+            while (true)
+            {
+                string choice = Input("Choose an arrowhead: wooden, steel or obsidian");
+                switch (choice)
+                {
+                    case "wooden":
+                        return Arrowhead.wooden;
+                    case "steel":
+                        return Arrowhead.steel;
+                    case "obsidian":
+                        return Arrowhead.obsidian;
+                    default:
+                        Console.WriteLine("Try typing a more fitting answer.");
+                        continue;
+                }
+            }
+        }
+
+        public Fletching GetFletching()
+        {
+
+            while (true)
+            {
+                string choice = Input("Choose fletching: plastic, turkey, goose");
+                switch (choice)
+                {
+                    case "plastic":
+                        return Fletching.plastic;
+                    case "turkey":
+                        return Fletching.turkeyFeathers;
+                    case "goose":
+                        return Fletching.gooseFeathers;
+                    default:
+                        Console.WriteLine("Try typing a more fitting answer.");
+                        continue;
+                }
+            }
+        }
+
+        public float GetLength()
+        {
+            float cm;
+            do
+            {
+                Console.WriteLine("Please choose the length of an arrow,\n" +
+                    "it should be shorter than 100 cm and longer than 60 cm");
+                cm = Convert.ToSingle(Console.ReadLine());
+
+            }
+            while (cm < 60 || cm > 100);
+
+            return cm;
+
+        }
+
+        public Arrow GetArrow()
+        {
+            Arrowhead arrowhead = GetArrowhead();
+            Fletching fletching = GetFletching();
+            float shaftLength = GetLength();
+            return new Arrow(arrowhead, fletching, shaftLength);
+        }
+
+        static void Main(string[] args)
+        //create new instance of an Arrow class then use it to display the cost of an arrow
+        {
+            Arrow arrow = GetArrow();
+
             Console.WriteLine($"The arrow price is {arrow.GetCost()} gold");
         }
     }
