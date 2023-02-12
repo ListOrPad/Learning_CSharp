@@ -1,34 +1,30 @@
 ﻿public class Arrow
 {
-
-    private Arrowhead _arrowhead;
-    private Fletching _fletching;
-    private float _shaftLength;
+    public Arrowhead ArrowheadProperty { get; set; }
+    public Fletching FletchingProperty { get; set; }
+    public float ShaftLength { get; set; }
     public Arrow(Arrowhead arrowhead, Fletching fletching, float shaftLength)
     {
-        _arrowhead = arrowhead;
-        _fletching = fletching;
-        _shaftLength = shaftLength;
+        ArrowheadProperty = arrowhead;
+        FletchingProperty = fletching;
+        ShaftLength = shaftLength;
     }
-    
-   
+
     public float GetCost()
     {
         float arrowHeadCost = 0;
-        if (_arrowhead == Arrowhead.steel) arrowHeadCost = 10;
-        if (_arrowhead == Arrowhead.obsidian) arrowHeadCost = 5;
-        if (_arrowhead == Arrowhead.wooden) arrowHeadCost = 3;
+        if (ArrowheadProperty == Arrowhead.steel) arrowHeadCost = 10;
+        if (ArrowheadProperty == Arrowhead.obsidian) arrowHeadCost = 5;
+        if (ArrowheadProperty == Arrowhead.wooden) arrowHeadCost = 3;
 
         float fletchingCost = 0;
-        if (_fletching == Fletching.plastic) fletchingCost = 10;
-        if (_fletching == Fletching.turkeyFeathers) fletchingCost = 5;
-        if (_fletching == Fletching.gooseFeathers) fletchingCost = 3;
+        if (FletchingProperty == Fletching.plastic) fletchingCost = 10;
+        if (FletchingProperty == Fletching.turkeyFeathers) fletchingCost = 5;
+        if (FletchingProperty == Fletching.gooseFeathers) fletchingCost = 3;
 
-      float shaftCost = 0.05f * _shaftLength;
+      float shaftCost = 0.05f * ShaftLength;
 
         float price = shaftCost + arrowHeadCost + fletchingCost;
         return price;
     }
-
-
 }
