@@ -1,13 +1,30 @@
 ﻿public class ArrowInitializer
 {
 
-    public string Input(string text)
+    public string? Input(string text)
     {
         //It writes text then you make an input
         Console.WriteLine(text);
-        string input = Console.ReadLine();
-        return input;
+        string? input = Console.ReadLine();
+        if (input != null)
+            return input;
+        else
+            return null;
     }
+
+    public static Arrow CreateEliteArrow()
+    {
+        return new Arrow(Arrowhead.steel, Fletching.plastic, 95);
+    }
+    public static Arrow CreateBeginnerArrow()
+    {
+        return new Arrow(Arrowhead.wooden, Fletching.gooseFeathers, 75);
+    }
+    public static Arrow CreateMarksmanArrow()
+    {
+        return new Arrow(Arrowhead.steel, Fletching.gooseFeathers, 65);
+    }
+
     public Arrowhead GetArrowhead()
     {
 
@@ -64,5 +81,13 @@
 
         return cm;
 
+    }
+
+    public Arrow GetCustomArrow()
+    {
+        Arrowhead arrowhead = GetArrowhead();
+        Fletching fletching = GetFletching();
+        float shaftLength = GetLength();
+        return new Arrow(arrowhead, fletching, shaftLength);
     }
 }

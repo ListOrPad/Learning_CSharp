@@ -6,11 +6,16 @@
         {
             ArrowInitializer arrowInitializer = new ArrowInitializer();
 
-            Arrowhead arrowhead = arrowInitializer.GetArrowhead();
-            Fletching fletching = arrowInitializer.GetFletching();
-            float shaftLength = arrowInitializer.GetLength();
+            Console.WriteLine("Choose which arrow to buy: elite, beginner, marksman or custom");
+            string choice = Console.ReadLine();
+            Arrow arrow = choice switch
+            {
+                "elite" => ArrowInitializer.CreateEliteArrow(),
+                "beginner" => ArrowInitializer.CreateBeginnerArrow(),
+                "marksman" => ArrowInitializer.CreateMarksmanArrow(),
+                "custom" => arrowInitializer.GetCustomArrow(),
+            };
 
-            Arrow arrow = new Arrow(arrowhead, fletching, shaftLength);
             float price = arrow.GetCost();
             Console.WriteLine($"The arrow price is {price} gold");
         }
