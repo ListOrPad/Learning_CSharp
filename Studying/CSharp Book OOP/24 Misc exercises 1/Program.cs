@@ -6,11 +6,11 @@
         {
             Point point1 = new Point(2, 3);
             Point point2 = new Point(-4, 0);
-            Point point3 = new Point();
+            Point pointZero = new Point();
 
             Console.WriteLine($"First point: ({point1.X}, {point1.Y})\n" +
                 $"Second point: ({point2.X}, {point2.Y})\n" +
-                $"Third point: ({point3.X}, {point3.Y})");
+                $"Starting point: ({pointZero.X}, {pointZero.Y})");
 
         }
     }

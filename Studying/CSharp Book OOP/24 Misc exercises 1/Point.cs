@@ -1,14 +1,14 @@
 ﻿public class Point
 {
-    public int X { get; }
-    public int Y { get; }
+    public float X { get; }
+    public float Y { get; }
 
-    public Point(int x, int y)
+    public Point(float x, float y)
     {
         X = x;
         Y = y;
     }
-    public Point()
+    public Point() : this(0, 0)
     { 
     
     }
