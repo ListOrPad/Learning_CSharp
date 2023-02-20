@@ -8,16 +8,17 @@ namespace _24_Task_3
         static void Main(string[] args)
         {
             //prepare ranks and colors for the card object
-            Card cardInit = new Card();
-            CardRank[] ranks = cardInit.GetRanks();
-            CardColor[] colors = cardInit.GetColors();
+            CardRank[] ranks = new CardRank[] {CardRank.One, CardRank.Two, CardRank.Three, CardRank.Four, CardRank.Five,
+                CardRank.Six, CardRank.Seven, CardRank.Eight, CardRank.Nine, CardRank.Ten, CardRank.DollarSign, CardRank.Percent,
+                CardRank.Percent, CardRank.Ampersand } ;
+            CardColor[] colors = new CardColor[] { CardColor.Red, CardColor.Green, CardColor.Blue, CardColor.Yellow } ;
 
-
-            for (int i = 0; i < 14; i++)        //14 == 14 ranks in a deck
+            //Dispay full deck
+            foreach (CardRank rank in ranks)
             {
-                for (int j = 0; j < 4; j++)         //4 because 4 colors for each rank in a deck
+                foreach (CardColor color in colors)
                 {
-                    Card card = new Card(ranks[i], colors[j]);
+                    Card card = new Card(rank, color);
                     Console.WriteLine($"The {card.Color} {card.Rank}");
                 }
             }

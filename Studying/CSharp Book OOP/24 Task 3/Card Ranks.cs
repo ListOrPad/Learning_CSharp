@@ -10,7 +10,7 @@
     Eight,
     Nine,
     Ten,
-    Dollar,
+    DollarSign,
     Percent,
     Caret,
     Ampersand
