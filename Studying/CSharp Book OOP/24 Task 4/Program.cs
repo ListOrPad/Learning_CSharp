@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             //Ask the user for starting password
-            Console.Write("Enter the starting password: ");
+            Console.Write("Enter the initial password: ");
             int password = Convert.ToInt32(Console.ReadLine());
 
             //create Door instance
@@ -19,20 +19,21 @@
                 string input = Console.ReadLine();
                 if (door.State == DoorState.Locked && input == "unlock")
                 {
-                    door.State = door.UnlockDoor();
+                    door.State = door.Unlock();
                 }
                 if (door.State == DoorState.Closed && input == "lock")
                 {
-                    door.State = door.LockDoor();
+                    door.State = door.Lock();
                 }
                 if (door.State == DoorState.Closed && input == "open")
                 {
-                    door.State = door.OpenDoor();
+                    door.State = door.Open();
                 }
                 if (door.State == DoorState.Open && input == "close")
                 {
-                    door.State = door.CloseDoor();
+                    door.State = door.Close();
                 }
+
                 if (door.State == DoorState.Locked)
                 {
                     Console.WriteLine("The door is locked, would you like to change the password now?\n" +
@@ -45,7 +46,6 @@
                     else continue;
                 }
             }
-
         }
     }
 }

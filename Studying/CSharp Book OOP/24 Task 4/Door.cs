@@ -1,20 +1,21 @@
 ﻿public class Door
 {
     //State Related Stuff
-    public DoorState OpenDoor()
+    public DoorState State { get; set; } = DoorState.Locked;
+    public DoorState Open()
     {
         return DoorState.Open;
     }
-    public DoorState CloseDoor()
+    public DoorState Close()
     {
         return DoorState.Closed;
     }
-    public DoorState LockDoor()
+    public DoorState Lock()
     {
         Console.Beep();      //just for fun
         return DoorState.Locked;
     }
-    public DoorState UnlockDoor()
+    public DoorState Unlock()
     {
         Console.Write("Enter the password.");
         int currentPassword = Convert.ToInt32(Console.ReadLine());
@@ -29,7 +30,6 @@
         }
     }
 
-    public DoorState State { get; set; } = DoorState.Locked;
 
     //Password Related Stuff
     public int Password { get; set; }
