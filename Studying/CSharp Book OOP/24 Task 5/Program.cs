@@ -14,7 +14,8 @@
 
                 if (validator.Password == null) break;
 
-                Console.WriteLine($"This password is {validator.TellIfValid(validator.Password)}");
+                string validOrNot = validator.TellIfValid(validator.Password);
+                Console.WriteLine($"This password is {validOrNot}");
             }
 
         }
