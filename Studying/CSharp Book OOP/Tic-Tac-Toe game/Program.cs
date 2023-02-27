@@ -9,7 +9,7 @@
             while (true)
             {
                 Board board = new Board();
-                board.UpdateBoard(); 
+                board.Play(); 
 
 
             }
