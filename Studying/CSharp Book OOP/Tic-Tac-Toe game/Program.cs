@@ -5,8 +5,14 @@
         static void Main(string[] args)
         {
             //Finally, we're at it!
-            //Tic-Tac-Toe Games
-            
+            //Tic-Tac-Toe Game
+            while (true)
+            {
+                Board board = new Board();
+                board.UpdateBoard(); 
+
+
+            }
 
 
         }
