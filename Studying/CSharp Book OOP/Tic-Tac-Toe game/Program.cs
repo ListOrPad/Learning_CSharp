@@ -9,9 +9,16 @@
             while (true)
             {
                 Board board = new Board();
-                board.Play(); 
+                board.Play();
 
-
+                
+                Game game = new Game();
+                game.DisplayScore();
+                //Refreshes console window after a round
+                Console.WriteLine("Up for another round?\n" +
+                                    "Press any key");
+                Console.ReadKey(true);
+                Console.Clear();
             }
 
 
