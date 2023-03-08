@@ -29,7 +29,7 @@ public class Board
         {
 
             //player X makes a move
-            Player player = new Player();
+            Player player = new Player("X");
             player.PickTile(s, 'X', 'O');
 
             UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);

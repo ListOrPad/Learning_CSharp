@@ -4,9 +4,12 @@
       plays the game:
         -decides on the move(picks a tile)
     */
-    public Player()
+    public string Name { get; }
+    public int Wins { get; set; }
+    public Player(string name)
     {
-
+        Name = name;
+        Wins = 0;
     }
     private int GetInput()
     {

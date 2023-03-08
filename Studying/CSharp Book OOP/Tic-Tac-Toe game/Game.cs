@@ -4,22 +4,29 @@ public class Game
 {
     //show result
     //determines winner, looser or a draw(knows rules)
-    public (int X, int O) score = (0, 0);
-    public bool WinXApprove { get; set; }
-    public bool WinOApprove { get; set; }
 
-    public void DisplayScore()        ///bool WinApprove?
+    private Board board;
+    private Player[] players;
+    private int playerIndex;
+    private int player1Wins;
+    private int player2Wins;
+    public (int X, int O) score = (0, 0);
+
+
+    public Game()
     {
-        if (WinXApprove)
-        {
-            score.X++;
-        }
-        else if (WinOApprove)
-        {
-            score.O++;
-        }
-        Console.WriteLine($"X: {score.X}, O: {score.O}");
-       
+        board = new Board();
+        players = new Player[2] { new Player("X"), new Player("O") };
+        playerIndex = 0;
+        player1Wins = 0;
+        player2Wins = 0;
+    }
+
+    public void DisplayScore()
+    {
+        Console.WriteLine("Score:");
+        Console.WriteLine($"Player 1: {player1Wins}");
+        Console.WriteLine($"Player 2: {player2Wins}");
     }
     public bool DetectWinOrDraw(char[] s)
     {
@@ -34,7 +41,6 @@ public class Game
             s[2] == 'X' && s[4] == 'X' && s[6] == 'X')
         {
             Console.WriteLine("Player X won this round!");
-            WinXApprove = true;
             return true;
         }
         else if (s[0] == 'O' && s[1] == 'O' && s[2] == 'O' ||
@@ -47,7 +53,6 @@ public class Game
             s[2] == 'O' && s[4] == 'O' && s[6] == 'O')
         {
             Console.WriteLine("Player O Win this round!");
-            WinOApprove = true;
             return true;
         }
         else if (s[0] != ' ' && s[1] != ' ' && s[2] != ' ' && s[3] != ' ' && s[4] != ' '
