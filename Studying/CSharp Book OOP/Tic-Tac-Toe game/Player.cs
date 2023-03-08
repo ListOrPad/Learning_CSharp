@@ -8,13 +8,55 @@
     {
 
     }
-    public void PickTile(char[] s, char XO)
+    private int GetInput()
     {
         Console.Write("Pick the tile (use numpad) ");
         int playerInput = int.Parse(Console.ReadLine()) - 1;
-        if (playerInput >= 0 && playerInput <= 8)
+        return playerInput;
+    }
+
+    public char PickTile(char[] s, char XO, char revertXO)
+    {
+        int playerInput = GetInput();
+        if (playerInput >= 0 && playerInput <= 8 && ValidateInput(playerInput, s))
         {
-            s[playerInput] = XO;
+            return s[playerInput] = XO;
+        }
+        else
+        {
+            Console.WriteLine("wrong tile, try again (check with numpad)");
+            if (RevertValidate(playerInput, s))        //if this is the tile is not empty
+            {
+                return s[playerInput] = revertXO;
+            } 
+            else
+            {
+                return s[playerInput] = ' '; 
+            }
+        }
+
+    }
+    public bool ValidateInput(int playerInput, char[] s)    //validates an input from user so it won't interfere with previous inputs
+    {
+        if (s[playerInput] != ' ')
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public bool RevertValidate(int playerInput, char[] s)    //validates an input from user so it won't interfere with previous inputs
+    {
+        if (s[playerInput] == ' ')
+        {
+            return false;
+        }
+        else
+        {
+            return true;
         }
     }
 }

@@ -5,7 +5,11 @@ public class Board
     //knows the status of every tile
     //tells if the tile is already filled
     //updates the status(data) and displays itself to the players every move(draws the board)
+    //___________________________________________________________________________
+    //'S' stays for "symbol" variable
+    //filling an array of chars with empty space symbols
 
+    public char[] s = Enumerable.Repeat(' ', 9).ToArray();
     private void UpdateBoard(char s1, char s2, char s3, char s4, char s5, char s6, char s7, char s8, char s9)
     {
         //Draw updated board
@@ -18,25 +22,20 @@ public class Board
     }
     public void Play()
     {
-        //'s' stays for "symbol" variable
-        //filling an array of chars with empty space symbols
-        char[] s = Enumerable.Repeat(' ', 9).ToArray();
-
         //Draw the board
         UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
 
-        //Continue the flow of the game after the board was drawn
         while (true)
         {
 
             //player X makes a move
             Player player = new Player();
-            player.PickTile(s, 'X');
+            player.PickTile(s, 'X', 'O');
 
             UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
 
             //player O makes a move
-            player.PickTile(s, 'O');
+            player.PickTile(s, 'O', 'X');
 
             UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
 
