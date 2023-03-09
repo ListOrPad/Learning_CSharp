@@ -27,20 +27,35 @@ public class Board
 
         while (true)
         {
-
+            Game game = new Game();
+            Player player = new Player('X');
             //player X makes a move
-            Player player = new Player("X");
-            player.PickTile(s, 'X', 'O');
-
+            do
+            {
+                player.PickTile(s, 'X');
+            }
+            while (player.Name == 'X');
             UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
 
-            //player O makes a move
-            player.PickTile(s, 'O', 'X');
-
-            UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
 
             //check if someone is victorious this round
-            Game game = new Game();
+
+            if (game.DetectWinOrDraw(s))
+            {
+                break;
+            }
+
+
+            player = new Player('O');
+            //player O makes a move
+            do
+            {
+                player.PickTile(s, 'O');
+            }
+            while (player.Name == 'O');
+
+            UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
+            
             if (game.DetectWinOrDraw(s))
             {
                 break; 

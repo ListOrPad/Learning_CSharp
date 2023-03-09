@@ -5,28 +5,21 @@ public class Game
     //show result
     //determines winner, looser or a draw(knows rules)
 
-    private Board board;
     private Player[] players;
-    private int playerIndex;
-    private int player1Wins;
-    private int player2Wins;
-    public (int X, int O) score = (0, 0);
+    private int playerXScore;
+    private int playerOScore;
 
 
     public Game()
     {
-        board = new Board();
-        players = new Player[2] { new Player("X"), new Player("O") };
-        playerIndex = 0;
-        player1Wins = 0;
-        player2Wins = 0;
+        players = new Player[2] { new Player('X'), new Player('O') };
+        playerXScore = 0;
+        playerOScore = 0;
     }
 
     public void DisplayScore()
     {
-        Console.WriteLine("Score:");
-        Console.WriteLine($"Player 1: {player1Wins}");
-        Console.WriteLine($"Player 2: {player2Wins}");
+        Console.WriteLine($"Score: X - {playerXScore} , O - {playerOScore}");
     }
     public bool DetectWinOrDraw(char[] s)
     {
