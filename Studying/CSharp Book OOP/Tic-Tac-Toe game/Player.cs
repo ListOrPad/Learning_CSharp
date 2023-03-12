@@ -5,19 +5,22 @@
         -decides on the move(picks a tile)
     */
     public char Name { get; set; }
-    public int Wins { get; set; }
+    public bool Winner { get; set; }     //maybe CHAR???????
     public Player(char name)
     {
         Name = name;
-        Wins = 0;
     }
-    private char SwapNames(char XOName)
+    private char SwapPlayer(char XOName)
     {
         if (XOName == 'X')
         {
             return 'O';
         }
-        else return 'X';
+        else if (XOName == 'O')
+        {
+            return 'X';
+        }
+        else return XOName;
     }
     private int GetInput()
     {
@@ -31,7 +34,7 @@
         int playerInput = GetInput();
         if (playerInput >= 0 && playerInput <= 8 && ValidateInput(playerInput, s))
         {
-            Name = SwapNames(XO);
+            Name = SwapPlayer(XO);
             return s[playerInput] = XO;
         }
         else

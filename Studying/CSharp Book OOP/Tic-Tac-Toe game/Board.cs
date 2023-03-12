@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-public class Board
+﻿public class Board
 {
     //knows the status of every tile
     //tells if the tile is already filled
@@ -10,7 +8,7 @@ public class Board
     //filling an array of chars with empty space symbols
 
     public char[] s = Enumerable.Repeat(' ', 9).ToArray();
-    private void UpdateBoard(char s1, char s2, char s3, char s4, char s5, char s6, char s7, char s8, char s9)
+    public void UpdateBoard(char s1, char s2, char s3, char s4, char s5, char s6, char s7, char s8, char s9)
     {
         //Draw updated board
         Console.WriteLine
@@ -20,47 +18,22 @@ public class Board
        $"---+---+---\n" +
        $" {s1} | {s2} | {s3} ");
     }
-    public void Play()
+    public void Play(char symbol)
     {
         //Draw the board
+       
+        Player playerS = new Player(symbol);
+        //player X makes a move
+        do
+        {
+            playerS.PickTile(s, symbol);
+        }
+        while (playerS.Name == symbol);
         UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
 
-        while (true)
-        {
-            Game game = new Game();
-            Player player = new Player('X');
-            //player X makes a move
-            do
-            {
-                player.PickTile(s, 'X');
-            }
-            while (player.Name == 'X');
-            UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
 
+        //check if someone is victorious this round
 
-            //check if someone is victorious this round
-
-            if (game.DetectWinOrDraw(s))
-            {
-                break;
-            }
-
-
-            player = new Player('O');
-            //player O makes a move
-            do
-            {
-                player.PickTile(s, 'O');
-            }
-            while (player.Name == 'O');
-
-            UpdateBoard(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]);
-            
-            if (game.DetectWinOrDraw(s))
-            {
-                break; 
-            }
-        }
     }
 
 }
