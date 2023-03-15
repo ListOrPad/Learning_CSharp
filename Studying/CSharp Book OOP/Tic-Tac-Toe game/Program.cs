@@ -10,7 +10,8 @@
             {
                 Game game = new Game();
                 Board board = new Board();
-                board.UpdateBoard(board.s[0], board.s[1], board.s[2], board.s[3], board.s[4], board.s[5], board.s[6], board.s[7], board.s[8]);
+                board.UpdateBoard(board.s[0], board.s[1], board.s[2], board.s[3], board.s[4],
+                                    board.s[5], board.s[6], board.s[7], board.s[8]);
                 while (true)
                 {
 
