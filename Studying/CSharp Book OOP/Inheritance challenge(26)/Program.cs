@@ -9,8 +9,9 @@
             while (true)
             {
                 InventoryItem item;
-                Console.WriteLine("What would you like to add to your pack?\n" +
-                                     "(type in: sword, arrow, bow, rope, food, water)");
+                Console.WriteLine($"What would you like to add to your pack? Your pack has\n" +
+                    $"{pack.CurrentItemsCount}/{pack.MaxItems} items,{pack.CurrentWeight}/{pack.MaxWeight} weight, {pack.CurrentVolume}/{pack.MaxVolume} volume.\n" +
+                    $"(type in: sword, arrow, bow, rope, food, water)");
                 string itemChoice = Console.ReadLine();
                 item = itemChoice switch
                 {
