@@ -5,4 +5,8 @@ public class Rope : InventoryItem
     {
 
     }
+    public override string ToString()
+    {
+        return "rope";
+    }
 }

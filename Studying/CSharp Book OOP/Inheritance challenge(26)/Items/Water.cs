@@ -5,4 +5,8 @@ public class Water : InventoryItem
     {
 
     }
+    public override string ToString()
+    {
+        return "water";
+    }
 }

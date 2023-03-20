@@ -5,4 +5,8 @@ public class Sword : InventoryItem
     {
 
     }
+    public override string ToString()
+    {
+        return "sword";
+    }
 }

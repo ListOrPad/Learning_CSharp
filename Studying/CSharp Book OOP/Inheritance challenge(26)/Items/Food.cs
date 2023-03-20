@@ -5,4 +5,8 @@ public class Food : InventoryItem
     {
 
     }
+    public override string ToString()
+    {
+        return "food";
+    }
 }
