@@ -1,27 +1,33 @@
 ﻿public class OnCommand : RobotCommand
 {
     public override void Run(Robot robot)
+
     {
-        robot.IsPowered = true;
+
+    }
+    public override void Command(Robot robot)
+    {
+        string? command;
+
+        command = Console.ReadLine();
+
+        if (command == "on")
+        {
+            robot.IsPowered = true;
+        }
+
+        robot.Y = command switch
+        {
+            "north" => NorthCommand(robot),
+            "south" => SouthCommand(robot),
+            _ => robot.Y
+        };
+        robot.X = command switch
+        {
+            "west" => WestCommand(robot),
+            "east" => EastCommand(robot),
+            _ => robot.X
+        }; 
     }
 
-    //public override int NorthCommand(Robot robot)
-    //{
-    //    return base.NorthCommand(robot);
-    //}
-
-    //public override int SouthCommand(Robot robot)
-    //{
-    //    return base.SouthCommand(robot);
-    //}
-
-    //public override int WestCommand(Robot robot)
-    //{
-    //    return base.WestCommand(robot);
-    //}
-
-    //public override int EastCommand(Robot robot)
-    //{
-    //    return base.EastCommand(robot);
-    //}
 }

@@ -8,76 +8,26 @@
             //(polymorphism, chapter 26)
             while (true)
             {
-                OnCommand command = new OnCommand();
 
-                string? firstCommand;
-                do
-                {
-                    Console.WriteLine("Turn the robot on or off?");
-                    firstCommand = Console.ReadLine();
-                }
-                while (firstCommand != "on" && firstCommand != "off");
-
-                string? secondCommand;
-                do
-                {
-                    Console.WriteLine("first direction command");
-                    secondCommand = Console.ReadLine();
-                }
-                while (secondCommand != "north" && secondCommand != "south" && secondCommand != "west" && secondCommand != "east");
-
-                string? thirdCommand;
-                do
-                {
-                    Console.WriteLine("second direction command");
-                    thirdCommand = Console.ReadLine();
-                }
-                while (thirdCommand != "north" && thirdCommand != "south" && thirdCommand != "west" && thirdCommand != "east");
-
+                //    if (robot.IsPowered == true)
+                //    {
+                //        robot.Run();
+                //    }
+                //    else
+                //    {
+                //        Console.WriteLine("the robot is off, at first, turn it on.");
+                //        continue;
+                //    } 
                 Robot robot = new Robot();
 
-                if (firstCommand == "on")
+                for (int i = 0; i < robot.Commands.Length; i++)
                 {
-                    robot.IsPowered = true;
+                    RobotCommand command = new OnCommand();
+                    command.Command(robot);
+                    robot.Commands[i] = command;
                 }
 
-                robot.Y = secondCommand switch           // '+=' ???? is this a correct operator or just '=' is correct?
-                {
-                    "north" => command.NorthCommand(robot),
-                    "south" => command.SouthCommand(robot),
-                    _ => robot.Y
-                };
-                robot.X = secondCommand switch
-                {
-                    "west" => command.WestCommand(robot),
-                    "east" => command.EastCommand(robot),
-                    _ => robot.X
-                };
-
-                robot.Y += thirdCommand switch
-                {
-                    "north" => command.NorthCommand(robot),
-                    "south" => command.SouthCommand(robot),
-                    _ => robot.Y
-                };
-                robot.X += thirdCommand switch
-                {
-                    "west" => command.WestCommand(robot),
-                    "east" => command.EastCommand(robot),
-                    _ => robot.X
-                };
-
-
-                if (robot.IsPowered == true)
-                {
-                    robot.Run();
-                }
-                else
-                {
-                    Console.WriteLine("the robot is off, first, turn it on.");
-                    continue;
-                } 
-
+                robot.Run();
 
 
             }

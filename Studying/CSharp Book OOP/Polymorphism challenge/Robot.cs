@@ -8,8 +8,9 @@
     {
         foreach (RobotCommand? command in Commands)
         {
-            command?.Run(this);
+            command?.Run(this);                                 //this method should contain information of all 3 commands
             Console.WriteLine($"[{X} {Y} {IsPowered}]");
         }
     }
+
 }
