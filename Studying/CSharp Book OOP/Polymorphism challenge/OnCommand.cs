@@ -1,33 +1,41 @@
 ﻿public class OnCommand : RobotCommand
 {
-    public override void Run(Robot robot)
-
+    public int X { get; set; }
+    public int Y { get; set; }      //maybe make a tuple (int x, int y) Coordinates ?
+    public string? Command { get; set; }
+    public OnCommand(Robot robot)
     {
+        Command = Console.ReadLine();
+        
 
-    }
-    public override void Command(Robot robot)
-    {
-        string? command;
-
-        command = Console.ReadLine();
-
-        if (command == "on")
+        //create an object accordingly to text prompt
+        if (Command == "on")
         {
             robot.IsPowered = true;
         }
 
-        robot.Y = command switch
+        if (Command == "north")
         {
-            "north" => NorthCommand(robot),
-            "south" => SouthCommand(robot),
-            _ => robot.Y
-        };
-        robot.X = command switch
+            Y = NorthCommand(robot, this);
+        }
+        if (Command == "south")
         {
-            "west" => WestCommand(robot),
-            "east" => EastCommand(robot),
-            _ => robot.X
-        }; 
+            Y = SouthCommand(robot, this);
+        }
+        if (Command == "west")
+        {
+            X = WestCommand(robot, this);
+        }
+        if (Command == "east")
+        {
+            X = EastCommand(robot, this);
+        }
     }
-
+    public override void Run(Robot robot)
+    {
+        //update each command object with used back then coordinates
+        robot.X += X;
+        robot.Y += Y;
+    }
+    
 }

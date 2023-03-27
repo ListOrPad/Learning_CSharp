@@ -1,52 +1,48 @@
-﻿public abstract class RobotCommand : Robot
+﻿public abstract class RobotCommand
 {
     public abstract void Run(Robot robot);
-    public virtual void Command(Robot robot)
-    {
-
-    }
-    public int NorthCommand(Robot robot)
+    public int NorthCommand(Robot robot, OnCommand command)
     {
         if (robot.IsPowered == true)
         {
-            return ++robot.Y;
+            return ++command.Y;
         }
         else
         {
-            return robot.Y;
+            return command.Y;
         }
     }
-    public int SouthCommand(Robot robot)
+    public int SouthCommand(Robot robot, OnCommand command)
     {
         if (robot.IsPowered == true)
         {
-            return --robot.Y;
+            return --command.Y;
         }
         else
         {
-            return robot.Y;
+            return command.Y;
         }
     }
-    public int WestCommand(Robot robot)
+    public int WestCommand(Robot robot, OnCommand command)
     {
         if (robot.IsPowered == true)
         {
-            return --robot.X;
+            return --command.X;
         }
         else
         {
-            return robot.X;
+            return command.X;
         }
     }
-    public int EastCommand(Robot robot)
+    public int EastCommand(Robot robot, OnCommand command)
     {
         if (robot.IsPowered == true)
         {
-            return ++robot.X;
+            return ++command.X;
         }
         else
         {
-            return robot.X;
+            return command.X;
         }
     }
 }

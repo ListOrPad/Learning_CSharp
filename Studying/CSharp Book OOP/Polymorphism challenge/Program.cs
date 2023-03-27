@@ -8,25 +8,15 @@
             //(polymorphism, chapter 26)
             while (true)
             {
-
-                //    if (robot.IsPowered == true)
-                //    {
-                //        robot.Run();
-                //    }
-                //    else
-                //    {
-                //        Console.WriteLine("the robot is off, at first, turn it on.");
-                //        continue;
-                //    } 
                 Robot robot = new Robot();
 
                 for (int i = 0; i < robot.Commands.Length; i++)
                 {
-                    RobotCommand command = new OnCommand();
-                    command.Command(robot);
-                    robot.Commands[i] = command;
+                    RobotCommand newCommand = new OnCommand(robot);
+                    robot.Commands[i] = newCommand;
                 }
 
+                
                 robot.Run();
 
 
