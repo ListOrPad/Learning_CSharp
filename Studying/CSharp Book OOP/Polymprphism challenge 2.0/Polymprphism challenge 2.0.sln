@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymprphism challenge 2.0", "Polymprphism challenge 2.0.csproj", "{08A9B9F2-8353-46DD-92EB-25AAD14059A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08A9B9F2-8353-46DD-92EB-25AAD14059A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A9B9F2-8353-46DD-92EB-25AAD14059A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A9B9F2-8353-46DD-92EB-25AAD14059A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A9B9F2-8353-46DD-92EB-25AAD14059A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB8B5C4B-43B3-4819-B901-B95CCB0E74EA}
+	EndGlobalSection
+EndGlobal
