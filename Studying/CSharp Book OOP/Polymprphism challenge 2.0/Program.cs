@@ -13,7 +13,7 @@
                 {
                     string? input = Console.ReadLine();
 
-                    RobotCommand newCommand;
+                    IRobotCommand newCommand;
                     newCommand = input switch
                     {
                         "on" => new OnCommand(),
