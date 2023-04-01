@@ -7,7 +7,7 @@
             //robot polymorphism challenge the way it was intended
             while(true)
             {
-                Robot robot= new Robot();
+                Robot robot = new Robot();
 
                 for (int i = 0; i < robot.Commands.Length; i++)
                 {
