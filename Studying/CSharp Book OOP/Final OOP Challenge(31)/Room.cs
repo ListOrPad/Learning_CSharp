@@ -2,12 +2,19 @@
 {
     public RoomContent Content { get; set; }
 
-    //public bool CheckFountain(Fountain fountain)  //checks if fountain is on or off
-    //{
-    //    if (fountain.IsActivated)
-    //    {
-    //        return true;
-    //    }
-    //    return false;
-    //}
+    public RoomContent GetContent(Player playerCoordinates)
+    {
+        if (playerCoordinates.Row == 0 && playerCoordinates.Column == 2)
+        {
+            return Content = RoomContent.Fountain;
+        }
+        else if (playerCoordinates.Row == 0 && playerCoordinates.Column == 0)
+        {
+            return Content = RoomContent.Entrance;
+        }
+        else
+        {
+            return Content = RoomContent.None;
+        }
+    }
 }

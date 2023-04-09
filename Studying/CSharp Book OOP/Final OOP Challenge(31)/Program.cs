@@ -8,24 +8,21 @@
             //(Hunt The Wumpus like)
             Game game = new Game(3, 3);
             Player player = new Player();
+            Fountain fountain = new Fountain();
 
 
             while (true)
             {
                 Round round = new Round();
                 Room room = new Room();
-                Fountain fountain = new Fountain();
 
                 round.DisplayStatus(room, player, fountain);
+                player.Action(room, fountain, game, player);
 
-                player.Action(room, fountain, game);
-
-
-                //game.CheckWin();
-
-
-
-
+                if (game.CheckWin(room, fountain, player))
+                {
+                    break;
+                }
             } 
         }
     }

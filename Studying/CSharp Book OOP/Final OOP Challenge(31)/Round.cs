@@ -1,10 +1,12 @@
-﻿public class Round
+﻿using System.Runtime.Intrinsics.X86;
+
+public class Round
 {
     
-    public void DisplayStatus(Room room, Player player, Fountain fountain)   //unfinished
+    public void DisplayStatus(Room room, Player player, Fountain fountain)
     {
-        Console.WriteLine($"You are in the room at (Row={player.Row}, Column={player.Column})");
-        if (room.Content == RoomContent.Fountain)
+        Console.WriteLine($"\nYou are in the room at (Row={player.Row}, Column={player.Column})");
+        if (room.GetContent(player) == RoomContent.Fountain)
         {
             if (!fountain.IsActivated) //checks if fountain is on or off
             {
@@ -15,9 +17,9 @@
                 Console.WriteLine("You hear the rushing waters from the Fountain of Objects. It has been reactivated!"); 
             } 
         }
-        else if (room.Content == RoomContent.Entrance)
+        else if (room.GetContent(player) == RoomContent.Entrance)
         {
-
+            Console.WriteLine("You see light in this room coming from outside the cavern.This is the entrance.");
         }
     }
 

@@ -3,29 +3,29 @@
     //represents position, in what room player currently is [row, column]
     public int Row { get; set; }
     public int Column { get; set; }
-    public void Action(Room room, Fountain fountain, Game game)
+    public void Action(Room room, Fountain fountain, Game game, Player playerCoordinates)
     {
         do
         {
-            Console.Write("What do you want to do?");
+            Console.Write("What do you want to do? ");
         
             string? input = Console.ReadLine();
             switch (input)
             {
                 case "move north":
-                    Column++;
-                    break;
-                case "move south":
-                    Column--;
-                    break;
-                case "move east":
                     Row++;
                     break;
-                case "move west":
+                case "move south":
                     Row--;
                     break;
-                case "activate fountain":
-                    if (room.Content == RoomContent.Fountain)
+                case "move east":
+                    Column++;
+                    break;
+                case "move west":
+                    Column--;
+                    break;
+                case "activate":
+                    if (room.GetContent(playerCoordinates) == RoomContent.Fountain)
                     {
                         fountain.IsActivated = true;
                     }
