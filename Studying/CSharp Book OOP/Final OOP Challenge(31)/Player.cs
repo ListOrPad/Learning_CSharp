@@ -13,16 +13,28 @@
             switch (input)
             {
                 case "move north":
-                    Row++;
+                    if (Row < game.MaxRow && Row >= 0)
+                    {
+                        Row++; 
+                    }
                     break;
                 case "move south":
-                    Row--;
+                    if (Row <= game.MaxRow && Row > 0)
+                    {
+                        Row--;
+                    }
                     break;
                 case "move east":
-                    Column++;
+                    if (Column < game.MaxColumn && Column >= 0)
+                    {
+                        Column++; 
+                    }
                     break;
                 case "move west":
-                    Column--;
+                    if (Column <= game.MaxColumn && Column > 0)
+                    {
+                        Column--; 
+                    }
                     break;
                 case "activate":
                     if (room.GetContent(playerCoordinates) == RoomContent.Fountain)

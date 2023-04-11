@@ -3,8 +3,10 @@
 
     public int MaxRow { get; }
     public int MaxColumn { get; }
-    public Game(int maxRow, int maxColumn)
+    public WorldSize Size { get; }
+    public Game(int maxRow, int maxColumn )
     {
+        Size = GetSize();
         MaxRow = maxRow;
         MaxColumn = maxColumn;
     }
@@ -17,5 +19,19 @@
             return true;
         }
         return false;
+    }
+
+    public WorldSize GetSize()
+    {
+        string input = Console.ReadLine();
+        WorldSize size;
+
+        size = input switch
+        {
+            "small" => WorldSize.Small,
+            "medium" => WorldSize.Medium,
+            "large" => WorldSize.Large,
+        };
+        return size;
     }
 }
