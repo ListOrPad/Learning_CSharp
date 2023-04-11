@@ -3,7 +3,7 @@
     //represents position, in what room player currently is [row, column]
     public int Row { get; set; }
     public int Column { get; set; }
-    public void Action(Room room, Fountain fountain, Game game, Player playerCoordinates)
+    public void DoAction(Room room, Fountain fountain, Game game, Player playerCoordinates)
     {
         do
         {

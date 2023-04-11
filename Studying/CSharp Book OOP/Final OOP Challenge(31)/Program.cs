@@ -17,7 +17,7 @@
                 Room room = new Room();
 
                 round.DisplayStatus(room, player, fountain, game);
-                player.Action(room, fountain, game, player);
+                player.DoAction(room, fountain, game, player);
 
                 if (game.CheckWin(room, fountain, player))
                 {
