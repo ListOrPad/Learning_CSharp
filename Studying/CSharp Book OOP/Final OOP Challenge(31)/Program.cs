@@ -6,7 +6,7 @@
         {
             //The Fountain of Objects Challenge
             //(Hunt The Wumpus like)
-            Game game = new Game(3, 3);
+            Game game = new Game();
             Player player = new Player();
             Fountain fountain = new Fountain();
 
@@ -16,7 +16,7 @@
                 Round round = new Round();
                 Room room = new Room();
 
-                round.DisplayStatus(room, player, fountain);
+                round.DisplayStatus(room, player, fountain, game);
                 player.Action(room, fountain, game, player);
 
                 if (game.CheckWin(room, fountain, player))

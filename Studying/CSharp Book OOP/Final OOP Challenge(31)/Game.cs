@@ -1,19 +1,17 @@
-﻿public class Game
-{
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-    public int MaxRow { get; }
-    public int MaxColumn { get; }
-    public WorldSize Size { get; }
-    public Game(int maxRow, int maxColumn )
+public class Game
+{
+    public (int maxRow, int maxColumn) Size { get; }  //(row, column)
+    public WorldSize _WorldSize { get; set; }
+    public Game()
     {
         Size = GetSize();
-        MaxRow = maxRow;
-        MaxColumn = maxColumn;
     }
 
     public bool CheckWin(Room room, Fountain fountain, Player playerCoordinates)
     {
-        if (room.GetContent(playerCoordinates) == RoomContent.Entrance && fountain.IsActivated)
+        if (room.GetContent(playerCoordinates, this) == RoomContent.Entrance && fountain.IsActivated)
         {
             Console.WriteLine("\nThe Fountain of Objects has been reactivated, and you have escaped with your life!");
             return true;
@@ -21,17 +19,36 @@
         return false;
     }
 
-    public WorldSize GetSize()
+    public (int, int) GetSize()
     {
+        Console.WriteLine("Choose the world size: small, medium or large");
         string input = Console.ReadLine();
-        WorldSize size;
 
-        size = input switch
+        _WorldSize = input switch
         {
             "small" => WorldSize.Small,
             "medium" => WorldSize.Medium,
-            "large" => WorldSize.Large,
+            "large" => WorldSize.Large
         };
-        return size;
+        if (_WorldSize == WorldSize.Small)
+        {
+            Console.WriteLine("You've chosen a small world.");
+            return (4, 4); 
+        }
+        else if (_WorldSize == WorldSize.Medium)
+        {
+            Console.WriteLine("You've chosen a medium world.");
+            return (6, 6);
+        }
+        else if(_WorldSize == WorldSize.Large)
+        {
+            Console.WriteLine("You've chosen a large world.");
+            return (8, 8);
+        }
+        else
+        {
+            Console.WriteLine("Oops! seems you misstyped, default size was chosen: small.");
+            return (4, 4);
+        }
     }
 }

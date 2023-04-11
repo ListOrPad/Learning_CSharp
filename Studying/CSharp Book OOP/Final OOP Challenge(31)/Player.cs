@@ -13,31 +13,31 @@
             switch (input)
             {
                 case "move north":
-                    if (Row < game.MaxRow && Row >= 0)
+                    if (Row < game.Size.maxRow && Row >= 0)
                     {
                         Row++; 
                     }
                     break;
                 case "move south":
-                    if (Row <= game.MaxRow && Row > 0)
+                    if (Row <= game.Size.maxRow && Row > 0)
                     {
                         Row--;
                     }
                     break;
                 case "move east":
-                    if (Column < game.MaxColumn && Column >= 0)
+                    if (Column < game.Size.maxColumn && Column >= 0)
                     {
                         Column++; 
                     }
                     break;
                 case "move west":
-                    if (Column <= game.MaxColumn && Column > 0)
+                    if (Column <= game.Size.maxColumn && Column > 0)
                     {
                         Column--; 
                     }
                     break;
                 case "activate":
-                    if (room.GetContent(playerCoordinates) == RoomContent.Fountain)
+                    if (room.GetContent(playerCoordinates, game) == RoomContent.Fountain)
                     {
                         fountain.IsActivated = true;
                     }
@@ -49,7 +49,7 @@
 
             }
         }
-        while (Column < 0 || Column > game.MaxColumn || Row > game.MaxRow || Row < 0); //make it impossible to go out of borders
+        while (Column < 0 || Column > game.Size.maxColumn || Row > game.Size.maxRow || Row < 0); //make it impossible to go out of borders
 
     }
 }
