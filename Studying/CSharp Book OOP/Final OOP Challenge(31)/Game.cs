@@ -1,17 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
+﻿
 public class Game
 {
     public (int maxRow, int maxColumn) Size { get; }  //(row, column)
-    public WorldSize _WorldSize { get; set; }
+    public WorldSize GameWorldSize { get; set; }
+    public EntranceRoom? Entrance { get; }
     public Game()
     {
         Size = GetSize();
     }
 
-    public bool CheckWin(Room room, Fountain fountain, Player playerCoordinates)
+    public bool CheckWin(EntranceRoom entrance, FountainRoom fountain, Player player)
     {
-        if (room.GetContent(playerCoordinates, this) == RoomContent.Entrance && fountain.IsActivated)
+        if (player.PlayerPosition.Row == entrance.RoomPosition.Row && player.PlayerPosition.Column == entrance.RoomPosition.Column && fountain.IsActivated) 
         {
             Console.WriteLine("\nThe Fountain of Objects has been reactivated, and you have escaped with your life!");
             return true;
@@ -22,33 +22,34 @@ public class Game
     public (int, int) GetSize()
     {
         Console.WriteLine("Choose the world size: small, medium or large");
-        string input = Console.ReadLine();
+        string? input = Console.ReadLine();
 
-        _WorldSize = input switch
+        GameWorldSize = input switch
         {
             "small" => WorldSize.Small,
             "medium" => WorldSize.Medium,
-            "large" => WorldSize.Large
+            "large" => WorldSize.Large,
+            _ => WorldSize.Small
         };
-        if (_WorldSize == WorldSize.Small)
+        if (GameWorldSize == WorldSize.Small)
         {
             Console.WriteLine("You've chosen a small world.");
-            return (4, 4); 
+            return (3, 3); 
         }
-        else if (_WorldSize == WorldSize.Medium)
+        else if (GameWorldSize == WorldSize.Medium)
         {
             Console.WriteLine("You've chosen a medium world.");
-            return (6, 6);
+            return (5, 5);
         }
-        else if(_WorldSize == WorldSize.Large)
+        else if(GameWorldSize == WorldSize.Large)
         {
             Console.WriteLine("You've chosen a large world.");
-            return (8, 8);
+            return (7, 7);
         }
         else
         {
-            Console.WriteLine("Oops! seems you misstyped, default size was chosen: small.");
-            return (4, 4);
+            Console.WriteLine("Oops! seems you've misstyped, default size was chosen: small.");
+            return (3, 3);
         }
     }
 }

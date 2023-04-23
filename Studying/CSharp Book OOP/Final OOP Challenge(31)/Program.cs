@@ -8,18 +8,31 @@
             //(Hunt The Wumpus like)
             Game game = new Game();
             Player player = new Player();
-            Fountain fountain = new Fountain();
+            FountainRoom fountain = new FountainRoom(game);
+            EntranceRoom entrance = new EntranceRoom(new Position(0, 0));
+            Maelstrom maelstrom = new Maelstrom(new Position(0, 1));
+            Maelstrom secondMaelstrom = new Maelstrom(new Position(-13, -13));
 
-
+            if (game.GameWorldSize == WorldSize.Medium)
+            {
+                maelstrom = new Maelstrom(new Position(3, 4));
+                secondMaelstrom = new Maelstrom(new Position(0, 1));
+            }
+            else if (game.GameWorldSize == WorldSize.Large)
+            {
+                maelstrom = new Maelstrom(new Position(5, 6));
+                secondMaelstrom = new Maelstrom(new Position(3, 4));
+            }
             while (true)
             {
                 Round round = new Round();
-                Room room = new Room();
 
-                round.DisplayStatus(room, player, fountain, game);
-                player.DoAction(room, fountain, game, player);
+                round.DisplayStatus(game, player, fountain, entrance, maelstrom, secondMaelstrom);
+                player.DoAction(fountain, game);
+                maelstrom.MakeMovementOnEncounter(game, player); //if player meets maelstrom, they move positions
+                secondMaelstrom.MakeMovementOnEncounter(game, player);
 
-                if (game.CheckWin(room, fountain, player))
+                if (game.CheckWin(entrance, fountain, player))
                 {
                     break;
                 }

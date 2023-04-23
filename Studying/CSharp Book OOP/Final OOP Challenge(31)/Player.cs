@@ -1,43 +1,41 @@
 ﻿public class Player
 {
-    //represents position, in what room player currently is [row, column]
-    public int Row { get; set; }
-    public int Column { get; set; }
-    public void DoAction(Room room, Fountain fountain, Game game, Player playerCoordinates)
+    public Position PlayerPosition { get; set; }
+    public void DoAction(FountainRoom fountain, Game game)
     {
         do
         {
             Console.Write("What do you want to do? ");
-        
+
             string? input = Console.ReadLine();
             switch (input)
             {
                 case "move north":
-                    if (Row < game.Size.maxRow && Row >= 0)
+                    if (PlayerPosition.Row <= game.Size.maxRow && PlayerPosition.Row > 0)
                     {
-                        Row++; 
+                        PlayerPosition = new Position(PlayerPosition.Row - 1, PlayerPosition.Column);
                     }
                     break;
                 case "move south":
-                    if (Row <= game.Size.maxRow && Row > 0)
+                    if (PlayerPosition.Row < game.Size.maxRow && PlayerPosition.Row >= 0)
                     {
-                        Row--;
+                        PlayerPosition = new Position(PlayerPosition.Row + 1, PlayerPosition.Column);
                     }
                     break;
                 case "move east":
-                    if (Column < game.Size.maxColumn && Column >= 0)
+                    if (PlayerPosition.Column < game.Size.maxColumn && PlayerPosition.Column >= 0)
                     {
-                        Column++; 
+                        PlayerPosition = new Position(PlayerPosition.Row, PlayerPosition.Column + 1);
                     }
                     break;
                 case "move west":
-                    if (Column <= game.Size.maxColumn && Column > 0)
+                    if (PlayerPosition.Column <= game.Size.maxColumn && PlayerPosition.Column > 0)
                     {
-                        Column--; 
+                        PlayerPosition = new Position(PlayerPosition.Row, PlayerPosition.Column - 1);
                     }
                     break;
                 case "activate":
-                    if (room.GetContent(playerCoordinates, game) == RoomContent.Fountain)
+                    if (PlayerPosition.Row == fountain.RoomPosition.Row && PlayerPosition.Column == fountain.RoomPosition.Column)
                     {
                         fountain.IsActivated = true;
                     }
@@ -49,7 +47,7 @@
 
             }
         }
-        while (Column < 0 || Column > game.Size.maxColumn || Row > game.Size.maxRow || Row < 0); //make it impossible to go out of borders
-
+        //make it impossible to go out of borders
+        while (PlayerPosition.Column < 0 || PlayerPosition.Column > game.Size.maxColumn || PlayerPosition.Row > game.Size.maxRow || PlayerPosition.Row < 0);
     }
 }

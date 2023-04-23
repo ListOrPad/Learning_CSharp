@@ -1,27 +1,43 @@
-﻿using System.Runtime.Intrinsics.X86;
-
+﻿
 public class Round
 {
-    
-    public void DisplayStatus(Room room, Player player, Fountain fountain, Game game)
+
+    public void DisplayStatus(Game game, Player player, FountainRoom fountain, EntranceRoom entrance, Maelstrom maelstrom, Maelstrom secondMaelstrom)
     {
-        Console.WriteLine($"\nYou are in the room at (Row={player.Row}, Column={player.Column})");
-        if (room.GetContent(player, game) == RoomContent.Fountain)
+        Console.WriteLine($"\nYou are in the room at (Row={player.PlayerPosition.Row}, Column={player.PlayerPosition.Column})");
+        if (player.PlayerPosition.Row == entrance.RoomPosition.Row && player.PlayerPosition.Column == entrance.RoomPosition.Column)
+        {
+            entrance.WriteMessageOnEncounter();
+        }
+        if (player.PlayerPosition.Row == fountain.RoomPosition.Row && player.PlayerPosition.Column == fountain.RoomPosition.Column)
         {
             if (!fountain.IsActivated) //checks if fountain is on or off
             {
-                Console.WriteLine("You hear water dripping in this room. The Fountain of Objects is here!"); 
+                fountain.WriteMessageOnEncounter();
             }
             else
             {
-                Console.WriteLine("You hear the rushing waters from the Fountain of Objects. It has been reactivated!"); 
+                Console.WriteLine(fountain.MessageOnActivate);
+            }
+        }
+        //if strom is in adjacent room write warning message
+        if (player.PlayerPosition.Row + 1 == maelstrom.RoomPosition.Row && player.PlayerPosition.Column == maelstrom.RoomPosition.Column
+            || player.PlayerPosition.Column + 1 == maelstrom.RoomPosition.Column && player.PlayerPosition.Row == maelstrom.RoomPosition.Row
+            || player.PlayerPosition.Row - 1 == maelstrom.RoomPosition.Row && player.PlayerPosition.Column == maelstrom.RoomPosition.Column
+            || player.PlayerPosition.Column - 1 == maelstrom.RoomPosition.Column && player.PlayerPosition.Row == maelstrom.RoomPosition.Row)
+        {
+            Console.WriteLine(maelstrom.WarningMessage);
+        }
+
+        if (game.GameWorldSize == WorldSize.Medium || game.GameWorldSize == WorldSize.Large)
+        {
+            if (player.PlayerPosition.Row + 1 == secondMaelstrom.RoomPosition.Row && player.PlayerPosition.Column == secondMaelstrom.RoomPosition.Column
+                || player.PlayerPosition.Column + 1 == secondMaelstrom.RoomPosition.Column && player.PlayerPosition.Row == secondMaelstrom.RoomPosition.Row
+                || player.PlayerPosition.Row - 1 == secondMaelstrom.RoomPosition.Row && player.PlayerPosition.Column == secondMaelstrom.RoomPosition.Column
+                || player.PlayerPosition.Column - 1 == secondMaelstrom.RoomPosition.Column && player.PlayerPosition.Row == secondMaelstrom.RoomPosition.Row)
+            {
+                Console.WriteLine(secondMaelstrom.WarningMessage);
             } 
         }
-        else if (room.GetContent(player, game) == RoomContent.Entrance)
-        {
-            Console.WriteLine("You see light in this room coming from outside the cavern.This is the entrance.");
-        }
     }
-
-    
 }
