@@ -15,7 +15,7 @@
     {
         if (player.PlayerPosition.Row == RoomPosition.Row && player.PlayerPosition.Column == RoomPosition.Column)
         {
-            //if maelstrom is at the entrance let it go to the opposite corner of the map so the player could leave the dungeon
+            //if maelstrom is at the entrance move it to the opposite corner of the map so the player could leave the dungeon
             if (RoomPosition.Row == 0 && RoomPosition.Column == 0)
             {
                 RoomPosition = new Position(game.Size.maxRow, game.Size.maxColumn);
