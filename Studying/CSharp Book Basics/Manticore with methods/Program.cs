@@ -15,7 +15,7 @@ namespace Manticore_with_methods
 
             //taking initial data, player 1 placing the Manticore
             int bossHP = 10;
-            int cityHP = 16;
+            int cityHP = 15;
             int round = 0;
 
             Random random = new Random();

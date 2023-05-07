@@ -7,6 +7,7 @@
             //The Fountain of Objects Challenge
             //(Hunt The Wumpus like)
             Game game = new Game();
+            DateTime timeBeginning = DateTime.Now;
             Player player = new Player();
             FountainRoom fountain = new FountainRoom(game);
             EntranceRoom entrance = new EntranceRoom(new Position(0, 0));
@@ -34,6 +35,9 @@
 
                 if (game.CheckWin(entrance, fountain, player))
                 {
+                    DateTime timeEnding = DateTime.Now;
+                    int timeSpan = timeEnding.Second - timeBeginning.Second;
+                    Console.WriteLine("You were in the dungeon for " + timeSpan + " seconds");
                     break;
                 }
             } 

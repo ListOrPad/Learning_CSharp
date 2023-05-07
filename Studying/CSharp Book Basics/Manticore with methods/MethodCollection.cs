@@ -42,13 +42,29 @@ public class MethodCollection
         }
 
     }
+    public void RenameElementalDamage(int canonDamage)
+    {
+        if (canonDamage == 3)
+        {
+            Console.Write(" Fire");
+        }
+        else if (canonDamage == 5)
+        {
+            Console.Write(" Electric");
+        }
+        else if (canonDamage == 10)
+        {
+            Console.Write(" Combined");
+        }
+    }
     public void DisplayInfo(int _round, int _cityHP, int _bossHP, int _canonDamage)
     {
-        Console.Write($"STATUS: Round: {_round} City: {_cityHP}/16 Manticore: {_bossHP}/10\n" +
+        Console.Write($"STATUS: Round: {_round} City: {_cityHP}/15 Manticore: {_bossHP}/10\n" +
                 $"The Canon is expected to deal ");
 
         RecolorDamage(_canonDamage);
         Console.Write(_canonDamage);
+        RenameElementalDamage(_canonDamage);
         Console.ForegroundColor = ConsoleColor.Gray;
         Console.WriteLine(" damage this round");
 
